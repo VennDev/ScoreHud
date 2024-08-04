@@ -76,6 +76,7 @@ class PlayerSession{
 
 		$world = $world ?? $player->getWorld()->getFolderName();
 
+        // check if the world is loaded
         if(!Server::getInstance()->getWorldManager()->getWorldByName($world)->isLoaded()) return;
 
 		// remove scoreboard if player is in a world where scoreboard is disabled
